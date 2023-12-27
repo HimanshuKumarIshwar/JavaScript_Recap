@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li =document.createElement('li');
+         li.innerText = `${langName}`
+
+         const parent =document.querySelector('.language');
+         parent.appendChild(li);
+
+    }
+    // addLanguage("Python");
+    // addLanguage('Java');
+
+
+    function addLanguageOptimal(langName){
+        const li =document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+         
+    }
+
+
+    addLanguageOptimal("python")
+    addLanguageOptimal("Java")
+    addLanguageOptimal('golang')
+
+   const secondLang = document.querySelector('li:nth-child(2)')
+   secondLang.innerText ="MAjo"
+    
+
+
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const h1 = document.createElement('h1');
+    h1.className = "mainHeading";
+    h1.id ="head1"
+    h1.setAttribute("title", "generatedHeading")
+    h1.style.backgroundColor = "green"
+    h1.style.padding = "12px"
+    //h1.innerText ="chai aur code"
+    const text = document.createTextNode("Chai aur code")
+    h1.appendChild(text);
+    document.body.appendChild(h1);
+</script>
+</html>
