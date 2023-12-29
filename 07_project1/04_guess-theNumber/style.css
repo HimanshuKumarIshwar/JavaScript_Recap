@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.game-area{
+    background-color: darkcyan;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+
+}
+
+input{
+    background-color: antiquewhite;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px gray;
+    margin-bottom: 10px;
+   border-style: unset;
+   padding: 10px;
+
+}
+#button{
+    font-size: larger;
+    height: 40px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#button:hover{
+    background-color: rgb(45, 44, 42);
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgb(194, 191, 191);
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+
+
+
