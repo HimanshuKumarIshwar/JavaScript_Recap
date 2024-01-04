@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #images {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body style="background-color: #414141;">
+    <h2>Amazing Image</h2>
+    <ul id="images">
+        <li><img width="200px"
+                src="https://images.pexels.com/photos/19380634/pexels-photo-19380634/free-photo-of-tabby-cat-yawning.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="Cat" id="cat"></li>
+        <li><img width="200px"
+                src="https://images.pexels.com/photos/17837316/pexels-photo-17837316/free-photo-of-yellow-brick-facade.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="Cat" id="home"></li>
+        <li><img width="200px"
+                src="https://images.pexels.com/photos/19491009/pexels-photo-19491009/free-photo-of-monkey-sitting-on-a-wall-and-eating-an-ice-cream.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="Cat" id="Monkey"></li>
+        <li><img width="200px"
+                src="https://images.pexels.com/photos/13093467/pexels-photo-13093467.png?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="Cat" id="cat"></li>
+                <a href="https://google.com" id="google">Google</a>
+
+    </ul>
+</body>
+
+<script>
+
+    // document.getElementById('cat').onclick = function(){
+    //     alert("cat click")
+    // }
+
+    // best approch
+
+    //    const cat =document.getElementById('cat')
+    //    cat.addEventListener('click', (e)=> {
+    //        console.log(e)
+    //    }, false)
+
+
+//     document.getElementById('images').addEventListener('click', (e)=> {
+//      console.log("clicked inside the ul")
+//     }, false)
+
+//  document.getElementById('cat').addEventListener('click', (e)=> {
+//      console.log("clicked cat")
+//      e.stopPropagation();
+//     }, false)
+
+//     document.getElementById('google').addEventListener('click', (e)=> {
+//         e.stopPropagation();
+//         e.preventDefault();
+//         console.log("google click")
+//     })
+
+
+
+      document.querySelector('#images').addEventListener('click', (e)=> {
+          if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode;
+
+//removeIt.remove();
+removeIt.parentNode.removeChild(removeIt);
+          }
+         
+
+      }, false)
+
+
+
+</script>
+
+</html>
